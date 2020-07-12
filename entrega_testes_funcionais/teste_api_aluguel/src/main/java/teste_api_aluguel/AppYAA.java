@@ -48,7 +48,7 @@ public class AppYAA {
 				System.out.println(result);
 				result = result.replace("\\","");
 				result = result.replace("\"{","{");
-				JSONObject obj = new JSONObject(result);
+				JSONObject obj =  new JSONObject (result);
 				return (double) obj.get("valor_calculado");
 			}
 		} catch (Exception e) {
@@ -56,4 +56,6 @@ public class AppYAA {
 		}
 		return -1;
 	}
+
+
 }

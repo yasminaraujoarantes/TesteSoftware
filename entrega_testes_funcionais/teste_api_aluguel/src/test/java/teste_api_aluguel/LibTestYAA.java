@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 
 public class LibTestYAA {
-	//Desconto de 10% (Dia 1-5)
+	
 	@Test
 	public void testNominal1YAA() {
 		assertEquals(-1, AppYAA.entradaDoUsuario(200.00, 0));
@@ -30,16 +30,7 @@ public class LibTestYAA {
 	public void testNominal5YAA() {
 		assertEquals(180.00, AppYAA.entradaDoUsuario(200.00, 5));
 	}
-	@Test
-	public void testNominal6YAA() {
-		assertEquals(180.00, AppYAA.entradaDoUsuario(200.00, 6));
-	}
 	
-	//Desconto 5% (Dia 6-10)
-	@Test
-	public void testNominal7YAA() {
-		assertEquals(190.00, AppYAA.entradaDoUsuario(200.00, 5));
-	}
 	@Test
 	public void testNominal8YAA() {
 		assertEquals(190.00, AppYAA.entradaDoUsuario(200.00, 6));
@@ -52,16 +43,7 @@ public class LibTestYAA {
 	public void testNominal10YAA() {
 		assertEquals(190.00, AppYAA.entradaDoUsuario(200.00, 10));
 	}
-	@Test
-	public void testNominal11YAA() {
-		assertEquals(190.00, AppYAA.entradaDoUsuario(200.00, 11));
-	}
 	
-	//Sem desconto (Dia 11-15)
-	@Test
-	public void testNominal12YAA() {
-		assertEquals(200.00, AppYAA.entradaDoUsuario(200.00, 10));
-	}
 	@Test
 	public void testNominal13YAA() {
 		assertEquals(200.00, AppYAA.entradaDoUsuario(200.00, 11));
@@ -74,16 +56,7 @@ public class LibTestYAA {
 	public void testNominal15YAA() {
 		assertEquals(200.00, AppYAA.entradaDoUsuario(200.00, 15));
 	}
-	@Test
-	public void testNominal16YAA() {
-		assertEquals(200.00, AppYAA.entradaDoUsuario(200.00, 16));
-	}
-	
-	//multa de 2% e 0.1% ao dia (Dia 11-15)
-	@Test
-	public void testNominal17YAA() {
-		assertEquals(204.2, AppYAA.entradaDoUsuario(200.00, 15));
-	}
+
 	@Test
 	public void testNominal18YAA() {
 		assertEquals(204.2, AppYAA.entradaDoUsuario(200.00, 16));
@@ -97,16 +70,7 @@ public class LibTestYAA {
 	public void testNominal20YAA() {
 		assertEquals(207.0, AppYAA.entradaDoUsuario(200.00, 30));
 	}
-	@Test
-	public void testNominal21YAA() {
-		assertEquals(207.0, AppYAA.entradaDoUsuario(200.00, 31));
-	}
 	
-	//Dias inválidos (Dias > 30)
-	@Test
-	public void testNominal22YAA() {
-		assertEquals(-1, AppYAA.entradaDoUsuario(200.00, 30));
-	}
 	@Test
 	public void testNominal23YAA() {
 		assertEquals(-1, AppYAA.entradaDoUsuario(200.00, 31));
